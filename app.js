@@ -66,7 +66,7 @@ function chooseRdmFlag() {
 
 	var flagIndex = Math.floor(Math.random() * flags.length);
 
-	elFlags[0].firstChild.attributes.src.value = "./flags/" + flags[flagIndex].code + ".svg"
+	elFlags[0].firstChild.attributes.src.value = "flags/" + flags[flagIndex].code + ".svg"
 	colors = flags[flagIndex].colors;
 	fillFlags(flagIndex, colors);
 }
@@ -95,25 +95,25 @@ function fillFlags(flagIndex, colors) {
 	for (var flag_number = 1; flag_number < 4; flag_number++) {
 		if (tabHL && tabHL.length > 0) {
 			generatedFlag = Math.floor(Math.random() * tabHL.length)
-			elFlags[flag_number].firstChild.attributes.src.value = "./flags/" + tabHL[generatedFlag].code + ".svg"
+			elFlags[flag_number].firstChild.attributes.src.value = "flags/" + tabHL[generatedFlag].code + ".svg"
 			chosenFlags.push(tabHL[generatedFlag])
 			tabHL.splice(generatedFlag, 1);
 		}
 		else if (tabML && tabML.length > 0) {
 			generatedFlag = Math.floor(Math.random() * tabML.length)
-			elFlags[flag_number].firstChild.attributes.src.value = "./flags/" + tabML[generatedFlag].code + ".svg"
+			elFlags[flag_number].firstChild.attributes.src.value = "flags/" + tabML[generatedFlag].code + ".svg"
 			chosenFlags.push(tabML[generatedFlag])
 			tabML.splice(generatedFlag, 1);
 		}
 		else if (tabLL && tabLL.length > 0) {
 			generatedFlag = Math.floor(Math.random() * tabLL.length)
-			elFlags[flag_number].firstChild.attributes.src.value = "./flags/" + tabLL[generatedFlag].code + ".svg"
+			elFlags[flag_number].firstChild.attributes.src.value = "flags/" + tabLL[generatedFlag].code + ".svg"
 			chosenFlags.push(tabLL[generatedFlag])
 			tabLL.splice(generatedFlag, 1);
 		}
 		else {
 			generatedFlag = Math.floor(Math.random() * leftFlags.length)
-			elFlags[flag_number].firstChild.attributes.src.value = "./flags/" + leftFlags[generatedFlag].code + ".svg"
+			elFlags[flag_number].firstChild.attributes.src.value = "flags/" + leftFlags[generatedFlag].code + ".svg"
 			chosenFlags.push(leftFlags[generatedFlag])
 			leftFlags.splice(generatedFlag, 1);
 		}
